@@ -13,16 +13,22 @@ namespace ControleContas.Model
         public int AnoNascimento { get; private set; }
         public string IdConta { get; private set; }
     }
+    
+public Cliente(string nome, string cpf, int anoNascimento)
+        {
+            Nome = nome;
 
-    //public Cliente(string nome, string cpf, int AnoNascimento)
-    //{
-    //    nome = nome;
-    //    cpf = cpf;
-    //    AnoNascimento = AnoNascimento;
-    //}
+            if( cpf.Length == 11 ){ Cpf = cpf; }
+            else { Console.WriteLine( $"{Nome}, CPF deve conter 11 digitos"); }
+            
+            if(DateTime.Now.Year - anoNascimento >= 18) { AnoNascimento = anoNascimento; }
+            else { Console.WriteLine($"{Nome}, é preciso ter mais de 18 anos para abrir uma conta."); }
+        }
 
-    //public Cliente()
-    //{
+        
+        public Cliente()
+        {
 
-    //}
+        }
+    }
 }
