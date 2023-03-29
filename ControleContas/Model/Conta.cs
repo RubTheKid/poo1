@@ -12,7 +12,7 @@ namespace ControleContas.Model
         private string _numero;
         private decimal _saldo;
         private static decimal _saldoTotal;
-        private static string _contaMaiorSaldo;
+        private static string? _contaMaiorSaldo;
         private static decimal _maiorSaldo;
 
 
